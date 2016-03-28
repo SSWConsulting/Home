@@ -1,11 +1,11 @@
 # Engineering Guidelines for Unit Tests and Functional Tests
 
-* [Overview](#Overview)
-* [Naming](#Naming)
-* [Unit test structure](#Unit test structure)
-* [Testing exception messages](#Testing exception messages)
-* [Use of Assertions](#Use xUnit.net's plethora of built-in assertions)
-* [Parallel tests](#Parallel tests)
+* [Overview](#overview)
+* [Naming](#naming)
+* [Unit test structure](#unit-test-structure)
+* [Testing exception messages](#testing-exception-messages)
+* [Use of Assertions](#use-xUnit.net's-plethora-of-built-in-assertions)
+* [Parallel tests](#parallel-tests)
 
 
 ## Overview
