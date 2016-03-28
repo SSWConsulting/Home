@@ -42,11 +42,7 @@ Before submitting a feature or substantial code contribution please discuss it w
 
 Here's a few things you should always do when making changes to the code base:
 
-**Engineering guidelines**
-
-The coding, style, and general engineering guidelines are published on the [Engineering guidelines](https://github.com/sswconsulting/Home/wiki/Engineering-guidelines) page.
-
-**Commit/Pull Request Format**
+### Commit/Pull Request Format
 
 ```
 Summary of the changes (Less than 80 chars)
@@ -56,9 +52,8 @@ Summary of the changes (Less than 80 chars)
 Addresses #bugnumber (in this specific format)
 ```
 
-**Tests**
 
--  Tests need to be provided for every bug/feature that is completed.
--  Tests only need to be present for issues that need to be verified by QA (e.g. not tasks)
--  If there is a scenario that is far too hard to test there does not need to be a test for it.
-  - "Too hard" is determined by the team as a whole.
+## Engineering guidelines
+
+The coding, style, and general engineering guidelines are published on the [Engineering guidelines](https://github.com/SSWConsulting/Home/blob/master/ENGINEERING-GUIDELINES.md) page.
+
