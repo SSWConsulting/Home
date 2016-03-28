@@ -4,7 +4,7 @@
 * [Naming](#naming)
 * [Unit test structure](#unit-test-structure)
 * [Testing exception messages](#testing-exception-messages)
-* [Use of Assertions](#use-xUnit.net's-plethora-of-built-in-assertions)
+* [Use of Assertions](#use-xunitnets-plethora-of-built-in-assertions)
 * [Parallel tests](#parallel-tests)
 
 

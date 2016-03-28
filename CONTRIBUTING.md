@@ -4,12 +4,12 @@ One of the easiest ways to contribute is to participate in discussions and discu
 
 You can also contribute by submitting pull requests with code changes.
 
-* [Bugs and feature requests](#Bugs and feature requests)
-* [General feedback and discussions](#General feedback and discussions)
-* [Reporting security issues and bugs](#Reporting security issues and bugs)
-* [Contributing code via a pull request](#Contributing code via a pull request)
-* [Engineering guidelines](#Engineering guidelines)
-* [GitHub Flavored Markdown](#GitHub Flavored Markdown)
+* [Bugs and feature requests](#bugs-and-feature-requests)
+* [General feedback and discussions](#general-feedback-and-discussions)
+* [Reporting security issues and bugs](#reporting security-issues and bugs)
+* [Contributing code via a pull request](#contributing-code-via-a-pull-request)
+* [Engineering guidelines](#engineering-guidelines)
+* [GitHub Flavored Markdown](#github-flavored-markdown)
 
 ## Bugs and feature requests
 For non-security related bugs please log a new issue in the appropriate GitHub repo. Here are some of the most common repos:
