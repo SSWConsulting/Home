@@ -1,12 +1,34 @@
-# Engineering Guidelines for Testing
+# Engineering Guidelines for Unit Tests and Functional Tests
+
+* [Overview](#overview)
+* [Naming](#naming)
+* [Unit test structure](#unit-test-structure)
+* [Testing exception messages](#testing-exception-messages)
+* [Use of Assertions](#use-xunitnets-plethora-of-built-in-assertions)
+* [Parallel tests](#parallel-tests)
+
+
+
+### Tests
+
+-  Tests need to be provided for every bug/feature that is completed.
+-  Tests only need to be present for issues that need to be verified by QA (e.g. not tasks)
+-  If there is a scenario that is far too hard to test there does not need to be a test for it.
+  - "Too hard" is determined by the team as a whole.
+
+
+## Overview
 
 We use xUnit.net for all unit testing.
 
+-  Tests need to be provided for every bug/feature that is completed.
+-  Tests only need to be present for issues that need to be verified by QA (e.g. not tasks)
+-  If there is a scenario that is far too hard to test there does not need to be a test for it.
+- "Too hard" is determined by the team as a whole.
 
-## Unit tests and functional tests
+## Naming
 
-
-#### Assembly naming
+### Assembly naming
 
 The unit tests for the `Microsoft.Fruit` assembly live in the `Microsoft.Fruit.Tests` assembly.
 
@@ -17,12 +39,12 @@ In general there should be exactly one unit test assembly for each product runti
 TODO: Should we update the SSW Rule to reflect the ASP.NET team guildelines ?
 
 
-#### Unit test class naming
+### Unit test class naming
 
 Test class names end with `Test` and live in the same namespace as the class being tested. For example, the unit tests for the `Microsoft.Fruit.Banana` class would be in a `Microsoft.Fruit.BananaTest` class in the test assembly.
 
 
-#### Unit test method naming
+### Unit test method naming
 
 Unit test method names must be descriptive about *what is being tested*, *under what conditions*, and *what the expectations are*. Pascal casing and underscores can be used to improve readability. The following test names are correct:
 
@@ -41,14 +63,14 @@ GetData
 ```
 
 
-#### Unit test structure
+## Unit test structure
 
 The contents of every unit test should be split into three distinct stages, optionally separated by these comments:
 
 ```c#
 // Arrange  
 // Act  
-// Assert 
+// Assert
 ```
 
 The crucial thing here is that the `Act` stage is exactly one statement. That one statement is nothing more than a call to the one method that you are trying to test. Keeping that one statement as simple as possible is also very important. For example, this is not ideal:
@@ -77,7 +99,7 @@ Assert.AreEqual(1234, result);
 Now the only reason the line with `CallSomeMethod()` can fail is if the method itself blew up. This is especially important when you're using helpers such as `ExceptionHelper`, where the delegate you pass into it must fail for exactly one reason.
 
 
-### Testing exception messages
+## Testing exception messages
 
 In general testing the specific exception message in a unit test is important. This ensures that the exact desired exception is what is being tested rather than a different exception of the same type. In order to verify the exact exception it is important to verify the message.
 
@@ -92,7 +114,7 @@ Assert.Equal(
 ```
 
 
-#### Use xUnit.net's plethora of built-in assertions
+## Use xUnit.net's plethora of built-in assertions
 
 xUnit.net includes many kinds of assertions – please use the most appropriate one for your test. This will make the tests a lot more readable and also allow the test runner report the best possible errors (whether it's local or the CI machine). For example, these are bad:
 
@@ -124,7 +146,7 @@ Assert.Equal(list1, list2, StringComparer.OrdinalIgnoreCase);
 ```
 
 
-#### Parallel tests
+## Parallel tests
 
 By default all unit test assemblies should run in parallel mode, which is the default. Unit tests shouldn't depend on any shared state, and so should generally be runnable in parallel. If the tests fail in parallel, the first thing to do is to figure out *why*; do not just disable parallel tests!
 
