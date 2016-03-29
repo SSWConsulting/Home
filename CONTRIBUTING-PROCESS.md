@@ -1,46 +1,38 @@
 # Contributing Process
 
-## Commit/Pull Request Format
-
-```
-Summary of the changes (Less than 80 chars)
- - Detail 1
- - Detail 2
-
-Addresses #bugnumber (in this specific format)
-```
-
-
-## Issue tracking
-
-Bug management takes place in GitHub. Each repo has its own issue tracker. Bugs cannot be moved between repos so make sure you open a bug in the right repo. If a bug is opened in the wrong repo someone will have to manually copy it to the correct repo.
-
-We use the HuBoard pattern for issue tags. Look at the numerical tags that SignalR uses for an idea: https://github.com/SignalR/SignalR/issues
-
-## Filing issues
-When filing issues, we ask you to use the [bug filing templates](https://github.com/aspnet/Home/wiki/Functional-bug-template) from the ASP.NET team.
-The best way to get your bug fixed is to be as detailed as you can be about the problem.
-Providing a minimal project with steps to reproduce the problem is ideal.
-Here are questions you can answer before you file a bug to make sure you're not missing any important information.
-
-1. Did you read the documentation for the project?
-2. Did you include the snippet of broken code in the issue?
-3. What are the *EXACT* steps to reproduce this problem?
-4. What package versions are you using (you can see these in the `project.json` file)?
-5. What operating system are you using?
-6. What version of IIS are you using?
-
-GitHub supports [markdown](https://help.github.com/articles/github-flavored-markdown/), so when filing bugs make sure you check the formatting before clicking submit.
-
-
 ## Contributing code and content
-Make sure you can build the code. Familiarize yourself with the project workflow and our coding conventions. If you don't know what a pull request is read this article: https://help.github.com/articles/using-pull-requests.
 
-Before submitting a feature or substantial code contribution please discuss it with the team and ensure it follows the product roadmap. You might also read these two blogs posts on contributing code: [Open Source Contribution Etiquette](http://tirania.org/blog/archive/2010/Dec-31.html) by Miguel de Icaza and [Don't "Push" Your Pull Requests](https://www.igvita.com/2011/12/19/dont-push-your-pull-requests/) by Ilya Grigorik. Note that all code submissions will be rigorously reviewed and tested by the SSW team, and only those that meet an extremely high bar for both quality and design/roadmap appropriateness will be merged into the source.
+If you've found and fixed a bug, or have a new feature you would like to add we would love you to chip in.
 
-Here's a few things you should always do when making changes to the code base:
+Here are a few tips
+* To make sure your pull-request makes it into the project please ensure you carefully read the
+[Engineering guidelines](ENGINEERING-GUIDELINES.md)
+* We have a well defined workflow. Before you lodge a pull-request check out our guide to the [Contributing Process](CONTRIBUTING-PROCESS.md)
+* Make sure you can build the code.
+  (Even better, configure continuous deployment and provide a link to your branch deployed and working)
+* If you don't know what a pull request is read this article: [Using pull requests](https://help.github.com/articles/using-pull-requests).
+* Check out these two blogs posts on contributing code: [Open Source Contribution Etiquette](http://tirania.org/blog/archive/2010/Dec-31.html) by Miguel de Icaza and [Don't "Push" Your Pull Requests](https://www.igvita.com/2011/12/19/dont-push-your-pull-requests/) by Ilya Grigorik.
+* Note that all code submissions will be rigorously reviewed and tested by the SSW team, and only those that meet an extremely high bar for both quality and design/roadmap appropriateness will be merged into the source.
 
-### Code reviews and checkins
+## Contributing Overview
+
+1. Discuss your your proposed change
+
+2. For the repo and implement your change / fix / feature
+
+3. Get a code review & feedback
+
+4. Submit a pull request
+
+## Discuss your proposed change
+
+* **For suggested features or substantial code contributions** please discuss it with the team and ensure it follows the product roadmap. We don't want you investing a lot of time developing something that may not be included in the project because it doesn't fix with the core contributors plans for the project.
+
+* **For small changes / bug fixes ** open a GitHub issue, include your problem or suggestion and how you intend to implement it. Getting feedback will help ensure the quickest path to a successful pull request.
+
+* May of our projects have **Community Standups** where you can join a real-time video discussion of the core teams plans for the upcoming sprint. The details for your projects community standup will be on the Readme.md for that project.
+
+## Code reviews and checkins
 
 To help ensure that only the highest quality code makes its way into the project, please submit all your code changes to GitHub as PRs. This includes runtime code changes, unit test updates, and updates to official samples (e.g. Music Store). For example, sending a PR for just an update to a unit test might seem like a waste of time but the unit tests are just as important as the product code and as such, reviewing changes to them is also just as important.
 
@@ -52,9 +44,7 @@ To commit the PR to the repo **do not use the Big Green Button**. Instead, do a 
 
 TODO: Rule - 'Do You Know How To Submit Pull Requests'
 
-
-
-### Branch strategy
+## Branch strategy
 
 TODO: To be updated to reflect GitHub flow
 
@@ -66,4 +56,12 @@ In general:
 
 Shortly before a release, the `release` branches are created from `dev`, and stabilization work happens there. Post-release work continus in the `dev` branch. Once the release takes place, the code is pushed from `release` to `master`.
 
-**Tests**
+## Commit/Pull Request Format
+
+```
+Summary of the changes (Less than 80 chars)
+ - Detail 1
+ - Detail 2
+
+Addresses #bugnumber (in this specific format)
+```
